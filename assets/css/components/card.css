@@ -1,0 +1,31 @@
+/* ==========================================================================
+   card.css — course card
+   Markup: <article class="card">…<div class="icon">…</div><h3>…</h3><p>…</p></article>
+   ========================================================================== */
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 27px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px #5b354018;
+}
+
+.card .icon {
+  font-size: 30px;
+}
+
+.card h3 {
+  margin: 10px 0 7px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}

@@ -1,0 +1,18 @@
+/* ==========================================================================
+   hero.css — <header class="hero">
+   ========================================================================== */
+
+.hero {
+  padding: 90px var(--gutter-x) 75px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 15%, var(--glow-rose), transparent 42%),
+    linear-gradient(180deg, var(--bg-hero), var(--bg));
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: var(--muted);
+  font-size: 19px;
+}

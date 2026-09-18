@@ -1,0 +1,9 @@
+/* ==========================================================================
+   section.css — page shell: content width + vertical rhythm
+   ========================================================================== */
+
+section {
+  padding: var(--section-y) var(--gutter-x);
+  max-width: var(--wrap);
+  margin: auto;
+}

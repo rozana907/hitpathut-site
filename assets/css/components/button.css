@@ -1,0 +1,30 @@
+/* ==========================================================================
+   button.css — .btn base class + modifiers
+   Markup: <a class="btn btn--primary" href="#…">…</a>
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  border: 1px solid var(--rose);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--rose);
+  color: var(--white);
+}
+
+.btn--secondary {
+  background: var(--white);
+  color: var(--rose-text);
+  margin-right: 8px; /* RTL: keeps the pair visually separated */
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px #b9688533;
+}

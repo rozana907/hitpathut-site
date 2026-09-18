@@ -1,0 +1,23 @@
+/* ==========================================================================
+   badge.css — .badge (eyebrow label) and .pill (topic tag)
+   ========================================================================== */
+
+.badge {
+  display: inline-block;
+  padding: 7px 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--rose-deep);
+  font-size: 13px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  background: var(--rose2);
+  border-radius: var(--radius-pill);
+  color: var(--rose-text);
+  font-size: 13px;
+}

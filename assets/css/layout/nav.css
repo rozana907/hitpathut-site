@@ -1,0 +1,54 @@
+/* ==========================================================================
+   nav.css — sticky top navigation
+   ========================================================================== */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 21px;
+  color: var(--rose-deep);
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.links a {
+  color: var(--ink);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.links a:hover,
+.links a.is-current {
+  color: var(--rose-deep);
+}
+
+/* Burger button: hidden on desktop, revealed at the mobile breakpoint
+   (see ../responsive.css). Progressively enhances the menu. */
+.nav-toggle {
+  display: none;
+  padding: 8px 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--rose-deep);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}

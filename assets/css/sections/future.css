@@ -1,0 +1,24 @@
+/* ==========================================================================
+   future.css — #future: "האני העתידית שלך"
+   Two-column layout: reflection list + weekly commitment note.
+   ========================================================================== */
+
+.future {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Copy in this section is intentionally right-aligned in RTL */
+.future h2,
+.future .sub {
+  text-align: start;
+}
+
+.future-box {
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}

@@ -1,0 +1,64 @@
+/* ==========================================================================
+   responsive.css — the single source of truth for breakpoints
+   Loaded last so it can override the layered stylesheets above.
+   ========================================================================== */
+
+/* --- Mobile: single column + collapsible navigation ---------------------- */
+@media (max-width: 750px) {
+  /* Navigation: burger button + drop-down menu (toggled by assets/js/main.js).
+     Without JS the button never shows and the menu stays collapsed, which is
+     the same behaviour the site had before. */
+  .has-js .nav-toggle {
+    display: inline-block;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 6px var(--gutter-x-sm);
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-card);
+  }
+
+  .links.is-open {
+    display: flex;
+  }
+
+  .links a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+
+  .links a:last-child {
+    border-bottom: 0;
+  }
+
+  /* Stack the card grid and the future section */
+  .grid,
+  .future {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  section {
+    padding: var(--section-y-sm) var(--gutter-x-sm);
+  }
+
+  .btn--secondary {
+    margin: 10px 0 0;
+  }
+
+  h2 {
+    font-size: 29px;
+  }
+}

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   daily.css — #daily: "השיעור היומי" panel + 5-minute exercise
+   ========================================================================== */
+
+.daily {
+  padding: 40px;
+  background: var(--rose2);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.daily .quote {
+  max-width: 720px;
+  margin: 10px auto 18px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Readable, right-aligned (RTL "start") white card inside the rose panel */
+.exercise {
+  max-width: 700px;
+  margin: 22px auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  text-align: start;
+}

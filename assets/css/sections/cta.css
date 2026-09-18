@@ -1,0 +1,19 @@
+/* ==========================================================================
+   cta.css — #about: dark closing call-to-action panel
+   ========================================================================== */
+
+.cta {
+  padding: 55px 25px;
+  background: var(--ink-invert);
+  border-radius: var(--radius-xl);
+  color: var(--white);
+  text-align: center;
+}
+
+.cta p {
+  color: var(--ink-invert-soft);
+}
+
+.cta .btn--primary {
+  border-color: var(--rose);
+}

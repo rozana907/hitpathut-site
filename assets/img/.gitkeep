@@ -1,0 +1,3 @@
+# Keeps the images folder in version control.
+# Put optimised assets here (WebP/SVG preferred) and reference them as
+# assets/img/<name>.<ext> from index.html.

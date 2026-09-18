@@ -1,0 +1,45 @@
+/* ==========================================================================
+   tokens.css — Design tokens
+   Loaded first. Every other stylesheet consumes these custom properties,
+   so the visual language (colours, radii, rhythm) lives in exactly one place.
+   ========================================================================== */
+
+:root {
+  /* --- Brand colours ---------------------------------------------------- */
+  --rose: #d98fa8;          /* primary accent */
+  --rose2: #f8e8ee;         /* soft rose surface (daily lesson, pills) */
+  --rose-deep: #b96885;     /* logo + badge text */
+  --rose-text: #9d5973;     /* secondary button + pill text */
+
+  /* --- Neutrals --------------------------------------------------------- */
+  --ink: #352b31;           /* body text */
+  --muted: #766b72;         /* secondary text */
+  --white: #fff;
+  --line: #eadde2;          /* hairline borders */
+  --bg: #fffafa;            /* page background */
+  --bg-glass: #fffafaee;    /* sticky navigation background */
+  --bg-hero: #fff6f9;       /* hero gradient base */
+  --glow-rose: #f7dce6;     /* hero radial glow */
+  --ink-invert: #33292f;    /* dark CTA panel */
+  --ink-invert-soft: #e7dce0;
+
+  /* --- Typography ------------------------------------------------------- */
+  --font-body: Arial, "Noto Sans Hebrew", sans-serif;
+
+  /* --- Radii ------------------------------------------------------------ */
+  --radius-sm: 18px;
+  --radius-md: 24px;
+  --radius-lg: 28px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* --- Elevation -------------------------------------------------------- */
+  --shadow-card: 0 8px 30px #5b35400b;
+
+  /* --- Layout rhythm ---------------------------------------------------- */
+  --wrap: 1200px;           /* max content width */
+  --gutter-x: 8%;           /* horizontal page gutter (desktop) */
+  --gutter-x-sm: 6%;        /* horizontal page gutter (mobile) */
+  --section-y: 72px;        /* vertical section padding (desktop) */
+  --section-y-sm: 55px;     /* vertical section padding (mobile) */
+}

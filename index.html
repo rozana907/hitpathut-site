@@ -1,105 +1,108 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>העוצמה שבך | התפתחות אישית</title>
-<style>
-:root{--rose:#d98fa8;--rose2:#f8e8ee;--ink:#352b31;--muted:#766b72;--white:#fff;--line:#eadde2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Hebrew",sans-serif;color:var(--ink);background:#fffafa;line-height:1.65}
-nav{position:sticky;top:0;z-index:5;background:#fffafaee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:14px 6%}
-.logo{font-weight:800;font-size:21px;color:#b96885}.links{display:flex;gap:24px}.links a{color:var(--ink);text-decoration:none;font-size:14px}
-.hero{padding:90px 8% 75px;text-align:center;background:radial-gradient(circle at 50% 15%,#f7dce6,transparent 42%),linear-gradient(180deg,#fff6f9,#fffafa)}
-.badge{display:inline-block;background:#fff;border:1px solid var(--line);padding:7px 16px;border-radius:999px;color:#b96885;font-size:13px}
-h1{font-size:clamp(42px,7vw,78px);line-height:1.08;margin:22px auto 18px;max-width:900px}
-.hero p{max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:19px}
-.btn{display:inline-block;padding:14px 25px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid var(--rose)}
-.primary{background:var(--rose);color:white}.secondary{background:white;color:#9d5973;margin-right:8px}
-section{padding:72px 8%;max-width:1200px;margin:auto}h2{text-align:center;font-size:34px;margin:0 0 10px}.sub{text-align:center;color:var(--muted);margin:0 auto 38px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:27px;box-shadow:0 8px 30px #5b35400b}.icon{font-size:30px}.card h3{margin:10px 0 7px}.card p{color:var(--muted);margin:0}
-.daily{background:var(--rose2);border-radius:32px;padding:40px;text-align:center}.daily .quote{font-size:26px;font-weight:700;max-width:720px;margin:10px auto 18px}.exercise{background:#fff;border-radius:18px;padding:20px;max-width:700px;margin:22px auto;text-align:right}
-.future{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.future-box{background:white;border:1px solid var(--line);border-radius:28px;padding:30px}
-ul{padding-right:20px}li{margin:9px 0}.pill{display:inline-block;padding:6px 12px;background:var(--rose2);border-radius:999px;margin:4px;color:#9d5973;font-size:13px}
-.cta{background:#33292f;color:#fff;border-radius:32px;text-align:center;padding:55px 25px}.cta p{color:#e7dce0}.cta .primary{border-color:#d98fa8}
-footer{text-align:center;padding:30px;color:var(--muted);font-size:13px}
-@media(max-width:750px){.links{display:none}.grid,.future{grid-template-columns:1fr}.hero{padding-top:65px}section{padding:55px 6%}.secondary{margin:10px 0 0}h2{font-size:29px}}
-</style>
-</head>
-<body>
-<nav>
-  <div class="logo">העוצמה שבך ✨</div>
-  <div class="links">
-    <a href="#courses">הקורסים</a><a href="#daily">השיעור היומי</a><a href="#future">האני העתידית</a><a href="#about">אודות</a>
-  </div>
-</nav>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="מרחב נשי להתפתחות, ביטחון עצמי, שפע והגשמה. פחות פחד ממה יחשבו עלייך. יותר בחירה, נוכחות ועוצמה.">
+    <meta name="theme-color" content="#d98fa8">
+    <title>העוצמה שבך | התפתחות אישית</title>
 
-<header class="hero">
-  <span class="badge">מסע להתפתחות אישית • יום אחד בכל פעם</span>
-  <h1>החיים שלך יכולים להיות גדולים יותר ממה שהעזת לדמיין.</h1>
-  <p>מרחב נשי להתפתחות, ביטחון עצמי, שפע והגשמה. פחות פחד ממה יחשבו עלייך. יותר בחירה, נוכחות ועוצמה.</p>
-  <a class="btn primary" href="#daily">אני מתחילה את השינוי שלי</a>
-  <a class="btn secondary" href="#courses">לגלות את הקורסים</a>
-</header>
+    <!-- CSS cascade order: base -> layout -> components -> sections -> responsive -->
+    <link rel="stylesheet" href="assets/css/base/tokens.css">
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/base/typography.css">
+    <link rel="stylesheet" href="assets/css/layout/nav.css">
+    <link rel="stylesheet" href="assets/css/layout/section.css">
+    <link rel="stylesheet" href="assets/css/layout/footer.css">
+    <link rel="stylesheet" href="assets/css/components/button.css">
+    <link rel="stylesheet" href="assets/css/components/badge.css">
+    <link rel="stylesheet" href="assets/css/components/card.css">
+    <link rel="stylesheet" href="assets/css/sections/hero.css">
+    <link rel="stylesheet" href="assets/css/sections/courses.css">
+    <link rel="stylesheet" href="assets/css/sections/daily.css">
+    <link rel="stylesheet" href="assets/css/sections/future.css">
+    <link rel="stylesheet" href="assets/css/sections/cta.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
-<section id="courses">
-  <h2>המסע שלך מתחיל כאן</h2>
-  <p class="sub">כלים פשוטים שאפשר לקחת מהמסך אל החיים עצמם.</p>
-  <div class="grid">
-    <article class="card"><div class="icon">🌸</div><h3>עוצמה נשית</h3><p>להכיר את הכוחות שלך, לדבר בביטחון ולתפוס מקום בלי להתנצל.</p></article>
-    <article class="card"><div class="icon">🦋</div><h3>לצאת מתודעת חוסר</h3><p>לזהות מחשבות שמקטינות אותך ולבנות נקודת מבט שמאפשרת יותר אפשרויות.</p></article>
-    <article class="card"><div class="icon">💎</div><h3>ביטחון עצמי</h3><p>תרגול של פעולה למרות הפחד, גבולות בריאים וחיזוק הקול הפנימי.</p></article>
-    <article class="card"><div class="icon">✨</div><h3>שפע וכסף</h3><p>עבודה על אמונות, מטרות והתנהגויות שמקדמות מערכת יחסים מודעת עם כסף.</p></article>
-    <article class="card"><div class="icon">❤️</div><h3>אהבה עצמית וגבולות</h3><p>להפסיק לחפש אישור בכל מקום וללמוד לבחור במה שמתאים לך.</p></article>
-    <article class="card"><div class="icon">🎯</div><h3>חזון והגשמה</h3><p>להפוך רצון כללי לחזון ברור, מטרות וצעדים שאפשר לבצע.</p></article>
-  </div>
-</section>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">העוצמה שבך ✨</div>
+      <div class="links" id="primary-nav">
+        <a href="#courses">הקורסים</a><a href="#daily">השיעור היומי</a><a href="#future">האני העתידית</a><a href="#about">אודות</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="פתיחת תפריט ניווט">תפריט</button>
+    </nav>
 
-<section id="daily">
-  <div class="daily">
-    <span class="badge">השיעור היומי</span>
-    <div class="quote">“השינוי מתחיל ברגע שבו את מפסיקה לחכות להרגיש מוכנה.”</div>
-    <p>היום אנחנו מתרגלות פעולה קטנה שמחזקת זהות חדשה.</p>
-    <div class="exercise">
-      <strong>תרגיל של 5 דקות</strong>
-      <ol>
-        <li>כתבי דבר אחד שאת רוצה לשנות בחיים שלך.</li>
-        <li>כתבי מה את מספרת לעצמך שמונע ממך לעשות אותו.</li>
-        <li>שאלי: “מה הייתי עושה היום אם הייתי סומכת על עצמי ב־10% יותר?”</li>
-        <li>בחרי פעולה אחת קטנה ובצעי אותה היום.</li>
-      </ol>
-    </div>
-    <span class="pill">תודעה</span><span class="pill">פעולה</span><span class="pill">ביטחון</span>
-  </div>
-</section>
+    <header class="hero">
+      <span class="badge">מסע להתפתחות אישית • יום אחד בכל פעם</span>
+      <h1>החיים שלך יכולים להיות גדולים יותר ממה שהעזת לדמיין.</h1>
+      <p>מרחב נשי להתפתחות, ביטחון עצמי, שפע והגשמה. פחות פחד ממה יחשבו עלייך. יותר בחירה, נוכחות ועוצמה.</p>
+      <a class="btn btn--primary" href="#daily">אני מתחילה את השינוי שלי</a>
+      <a class="btn btn--secondary" href="#courses">לגלות את הקורסים</a>
+    </header>
 
-<section id="future">
-  <div>
-    <h2 style="text-align:right">האני העתידית שלך</h2>
-    <p class="sub" style="text-align:right">לא רק לדמיין אותה. להתחיל לקבל החלטות שמתאימות לה.</p>
-    <ul>
-      <li>מי אני רוצה להיות?</li>
-      <li>איך אני רוצה להרגיש ביום יום?</li>
-      <li>מה אני מפסיקה להסכים לו?</li>
-      <li>מה הצעד האמיץ הבא שלי?</li>
-    </ul>
-  </div>
-  <div class="future-box">
-    <h3>התחייבות השבוע שלי ✍️</h3>
-    <p>השבוע אני בוחרת בעצמי דרך:</p>
-    <p><strong>________________________________</strong></p>
-    <p>הצעד הראשון שלי:</p>
-    <p><strong>________________________________</strong></p>
-  </div>
-</section>
+    <section id="courses">
+      <h2>המסע שלך מתחיל כאן</h2>
+      <p class="sub">כלים פשוטים שאפשר לקחת מהמסך אל החיים עצמם.</p>
+      <div class="grid">
+        <article class="card"><div class="icon">🌸</div><h3>עוצמה נשית</h3><p>להכיר את הכוחות שלך, לדבר בביטחון ולתפוס מקום בלי להתנצל.</p></article>
+        <article class="card"><div class="icon">🦋</div><h3>לצאת מתודעת חוסר</h3><p>לזהות מחשבות שמקטינות אותך ולבנות נקודת מבט שמאפשרת יותר אפשרויות.</p></article>
+        <article class="card"><div class="icon">💎</div><h3>ביטחון עצמי</h3><p>תרגול של פעולה למרות הפחד, גבולות בריאים וחיזוק הקול הפנימי.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>שפע וכסף</h3><p>עבודה על אמונות, מטרות והתנהגויות שמקדמות מערכת יחסים מודעת עם כסף.</p></article>
+        <article class="card"><div class="icon">❤️</div><h3>אהבה עצמית וגבולות</h3><p>להפסיק לחפש אישור בכל מקום וללמוד לבחור במה שמתאים לך.</p></article>
+        <article class="card"><div class="icon">🎯</div><h3>חזון והגשמה</h3><p>להפוך רצון כללי לחזון ברור, מטרות וצעדים שאפשר לבצע.</p></article>
+      </div>
+    </section>
 
-<section id="about">
-  <div class="cta">
-    <h2>זה לא מסע להיות מישהי אחרת.</h2>
-    <p>זה מסע להסיר שכבות של פחד, ספק והרגלים ישנים, ולבנות חיים שמרגישים שלך.</p>
-    <a class="btn primary" href="#courses">להתחיל עכשיו</a>
-  </div>
-</section>
+    <section id="daily">
+      <div class="daily">
+        <span class="badge">השיעור היומי</span>
+        <div class="quote">“השינוי מתחיל ברגע שבו את מפסיקה לחכות להרגיש מוכנה.”</div>
+        <p>היום אנחנו מתרגלות פעולה קטנה שמחזקת זהות חדשה.</p>
+        <div class="exercise">
+          <strong>תרגיל של 5 דקות</strong>
+          <ol>
+            <li>כתבי דבר אחד שאת רוצה לשנות בחיים שלך.</li>
+            <li>כתבי מה את מספרת לעצמך שמונע ממך לעשות אותו.</li>
+            <li>שאלי: “מה הייתי עושה היום אם הייתי סומכת על עצמי ב־10% יותר?”</li>
+            <li>בחרי פעולה אחת קטנה ובצעי אותה היום.</li>
+          </ol>
+        </div>
+        <span class="pill">תודעה</span><span class="pill">פעולה</span><span class="pill">ביטחון</span>
+      </div>
+    </section>
 
-<footer>© 2026 העוצמה שבך • אתר לדוגמה להתפתחות אישית</footer>
-</body>
+    <section id="future">
+      <div class="future">
+        <h2>האני העתידית שלך</h2>
+        <p class="sub">לא רק לדמיין אותה. להתחיל לקבל החלטות שמתאימות לה.</p>
+        <ul>
+          <li>מי אני רוצה להיות?</li>
+          <li>איך אני רוצה להרגיש ביום יום?</li>
+          <li>מה אני מפסיקה להסכים לו?</li>
+          <li>מה הצעד האמיץ הבא שלי?</li>
+        </ul>
+      </div>
+      <div class="future-box">
+        <h3>התחייבות השבוע שלי ✍️</h3>
+        <p>השבוע אני בוחרת בעצמי דרך:</p>
+        <p><strong>________________________________</strong></p>
+        <p>הצעד הראשון שלי:</p>
+        <p><strong>________________________________</strong></p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="cta">
+        <h2>זה לא מסע להיות מישהי אחרת.</h2>
+        <p>זה מסע להסיר שכבות של פחד, ספק והרגלים ישנים, ולבנות חיים שמרגישים שלך.</p>
+        <a class="btn btn--primary" href="#courses">להתחיל עכשיו</a>
+      </div>
+    </section>
+
+    <footer>© <span data-current-year>2026</span> העוצמה שבך • אתר לדוגמה להתפתחות אישית</footer>
+  </body>
 </html>
+
