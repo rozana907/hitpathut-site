@@ -1,0 +1,13 @@
+# Keep line endings consistent: everything in this repo is authored on
+# Windows and served as a static site, so LF is stored for text files and
+# binary assets are never touched.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

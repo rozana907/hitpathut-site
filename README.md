@@ -7,6 +7,8 @@
 ```
 .
 ├── index.html                     # דף הבית — תגיות בלבד, בלי CSS/JS מוטמעים
+├── .gitattributes                 # LF line endings for the whole repo
+├── scarcity.html                  # presentation page: scarcity mindset (12 slides)
 ├── assets/
 │   ├── css/
 │   │   ├── base/                  # שכבת הבסיס — נטענת ראשונה
@@ -20,7 +22,8 @@
 │   │   ├── components/            # רכיבים לשימוש חוזר
 │   │   │   ├── button.css         # .btn + .btn--primary / .btn--secondary
 │   │   │   ├── badge.css          # .badge ו־.pill
-│   │   │   └── card.css           # .card לכרטיסי הקורסים
+│   │   │   ├── card.css           # .card לכרטיסי הקורסים
+│   │   │   └── deck.css           # presentation component: .deck, .slide
 │   │   ├── sections/              # עיצוב לפי מקטע בעמוד
 │   │   │   ├── hero.css
 │   │   │   ├── courses.css        # .grid — גריד כרטיסי הקורסים
@@ -29,7 +32,8 @@
 │   │   │   └── cta.css            # .cta
 │   │   └── responsive.css         # כל ה־breakpoints במקום אחד (נטען אחרון)
 │   ├── js/
-│   │   └── main.js                # JS וניל, ללא תלויות, נטען עם defer
+│   │   ├── main.js                # JS וניל, ללא תלויות, נטען עם defer
+│   │   └── deck.js                # slide deck behaviour (scarcity.html)
 │   └── img/                       # נכסי תמונה (WebP/SVG מומלץ)
 └── README.md
 ```
@@ -78,3 +82,13 @@ npx serve .
   (שמות גנריים מדי שעלולים להתנגש בעתיד).
 - נוסף `assets/js/main.js`: תפריט מובייל נגיש (כפתור "תפריט"), שנה דינמית בפוטר
   ו־scroll-spy שמסמן את הקישור הפעיל בניווט.
+
+
+## מצגות (presentations)
+
+- `scarcity.html` - 12-slide deck; the matching course card in `index.html` links to it via `.card__cta`.
+- Markup hooks: `data-deck`, `data-slide`, `data-deck-prev`, `data-deck-next`, `data-deck-dots`, `data-deck-count`, `data-deck-progress`.
+- Styles: `assets/css/components/deck.css`. Behaviour: `assets/js/deck.js` (needs `main.js` for the `.has-js` flag).
+- Keyboard: ArrowLeft / Space / PageDown = next (RTL), ArrowRight / PageUp = back, Home / End = first / last. Touch: swipe left = next.
+- Deep links work: `scarcity.html#7`. Without JS every slide is rendered as a stacked article, and Ctrl+P prints one slide per page (save as PDF).
+- To add a slide, copy one `<article class="slide" data-slide>` block - dots, counter and progress bar update themselves.

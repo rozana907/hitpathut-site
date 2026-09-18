@@ -1,0 +1,324 @@
+/* ==========================================================================
+   deck.css — slide deck component used by the presentation pages
+   (see scarcity.html). Behaviour lives in assets/js/deck.js.
+   Progressive enhancement: the deck shell is only "interactive" under
+   .has-js — without JS every slide stays visible as a stacked article.
+   ========================================================================== */
+
+.deck {
+  position: relative;
+  padding: 34px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+/* --- top row: badge + slide counter ------------------------------------- */
+.deck__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.deck__count {
+  display: none;
+  color: var(--rose-text);
+  font-size: 13px;
+}
+
+.has-js .deck__count {
+  display: inline-block;
+}
+
+/* --- progress bar ------------------------------------------------------- */
+.deck__progress {
+  display: none;
+  height: 4px;
+  margin-bottom: 24px;
+  background: var(--rose2);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.has-js .deck__progress {
+  display: block;
+}
+
+.deck__progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--rose);
+  transition: width 0.3s ease;
+}
+
+/* --- slides ------------------------------------------------------------- */
+.deck__slides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
+}
+
+.slide p {
+  margin: 0 0 12px;
+}
+
+.slide h2,
+.slide h3 {
+  text-align: start;
+  margin: 0 0 12px;
+}
+
+.slide h2 {
+  font-size: 30px;
+}
+
+.slide__kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--rose-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.slide__lead {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.slide__list {
+  margin: 0 0 12px;
+}
+
+.slide__list li {
+  margin: 10px 0;
+}
+
+.slide__note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* quote list: the sentences that play in our head */
+.slide__quotes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide__quotes li {
+  margin: 0 0 12px;
+  padding: 14px 18px;
+  background: var(--rose2);
+  border-radius: var(--radius-sm);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* numbered practice steps */
+.slide__steps {
+  margin: 0;
+  padding-right: 22px;
+}
+
+.slide__steps li {
+  margin: 12px 0;
+}
+
+.slide__steps strong {
+  color: var(--rose-deep);
+}
+
+/* --- slide variants ----------------------------------------------------- */
+.slide--title {
+  text-align: center;
+}
+
+.slide--title h1 {
+  max-width: none;
+  margin: 0 0 14px;
+  font-size: clamp(38px, 6vw, 60px);
+}
+
+.slide--title .slide__lead {
+  max-width: 620px;
+  margin: 0 auto 12px;
+  font-size: 19px;
+}
+
+.slide--cta {
+  padding: 34px 26px;
+  background: var(--ink-invert);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  text-align: center;
+}
+
+.slide--cta h2 {
+  text-align: center;
+}
+
+.slide--cta p {
+  color: var(--ink-invert-soft);
+}
+
+.slide--cta .slide__kicker {
+  color: var(--rose);
+}
+
+.slide--cta .slide__note {
+  color: var(--ink-invert-soft);
+  opacity: 0.85;
+}
+
+.slide__bigquote {
+  max-width: 640px;
+  margin: 0 auto 18px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* --- controls ----------------------------------------------------------- */
+.deck__bar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.has-js .deck__bar {
+  display: flex;
+}
+
+.deck__btn {
+  min-width: 104px;
+  text-align: center;
+}
+
+.deck__btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.deck__btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.deck__dots {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.deck__dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--rose);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.deck__dot.is-active {
+  background: var(--rose);
+}
+
+.deck__hint {
+  display: none;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.has-js .deck__hint {
+  display: block;
+}
+
+/* --- JS-only slide switching -------------------------------------------- */
+.slide {
+  display: block;
+}
+
+.has-js .slide {
+  display: none;
+}
+
+.has-js .slide.is-active {
+  display: block;
+  animation: deck-slide-in 0.35s ease both;
+}
+
+.slide + .slide {
+  margin-top: 26px; /* only visible before JS takes over */
+}
+
+@keyframes deck-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- preferences -------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .has-js .slide.is-active {
+    animation: none;
+  }
+
+  .deck__progress span {
+    transition: none;
+  }
+}
+
+/* --- print / save as PDF: one slide per page ---------------------------- */
+@media print {
+  nav,
+  footer,
+  .deck__top,
+  .deck__bar,
+  .deck__hint,
+  .deck__progress {
+    display: none !important;
+  }
+
+  .deck {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .deck__slides {
+    display: block;
+    min-height: 0;
+  }
+
+  .has-js .slide {
+    display: block;
+    animation: none;
+  }
+
+  .slide + .slide {
+    margin-top: 0;
+  }
+
+  .slide {
+    page-break-after: always;
+    break-after: page;
+  }
+}

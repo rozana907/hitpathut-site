@@ -29,3 +29,18 @@
   margin: 0;
   color: var(--muted);
 }
+
+/* Link to a full presentation / lesson that belongs to the card's topic */
+.card__cta {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--rose-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.card__cta:hover {
+  border-bottom-color: var(--rose-text);
+}

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="מצגת על תודעת חוסר: למה תמיד מרגיש שאין מספיק, מה המחיר של החיים במרוץ, ואיך מתרגלים תודעת שפע — צעד קטן בכל פעם.">
+  <meta name="theme-color" content="#d98fa8">
+  <title>תודעת חוסר — מצגת | העוצמה שבך</title>
+
+  <!-- CSS cascade order: base -> layout -> components -> deck -> responsive -->
+  <link rel="stylesheet" href="assets/css/base/tokens.css">
+  <link rel="stylesheet" href="assets/css/base/reset.css">
+  <link rel="stylesheet" href="assets/css/base/typography.css">
+  <link rel="stylesheet" href="assets/css/layout/nav.css">
+  <link rel="stylesheet" href="assets/css/layout/section.css">
+  <link rel="stylesheet" href="assets/css/layout/footer.css">
+  <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/badge.css">
+  <link rel="stylesheet" href="assets/css/components/deck.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/deck.js" defer></script>
+</head>
+<body>
+
+  <!-- ניווט -->
+  <nav>
+    <div class="logo">העוצמה שבך ✨</div>
+    <div class="links" id="primary-nav">
+      <a href="index.html#courses">הקורסים</a>
+      <a href="index.html#daily">השיעור היומי</a>
+      <a href="index.html#future">האני העתידית</a>
+      <a href="index.html">חזרה לדף הבית</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="פתיחת תפריט ניווט">תפריט</button>
+  </nav>
+
+  <!-- מצגת -->
+  <main>
+    <section id="presentation">
+      <div class="deck" data-deck aria-label="מצגת תודעת חוסר">
+        <div class="deck__top">
+          <span class="badge">מצגת • 12 שקופיות</span>
+          <span class="deck__count" data-deck-count aria-live="polite">1 מתוך 12</span>
+        </div>
+
+        <div class="deck__progress" aria-hidden="true"><span data-deck-progress></span></div>
+
+        <div class="deck__slides">
+          <article class="slide slide--title is-active" data-slide>
+            <span class="slide__kicker">קורס: לצאת מתודעת חוסר</span>
+            <h1>תודעת חוסר</h1>
+            <p class="slide__lead">למה תמיד מרגיש שאין מספיק — ואיך יוצאים מהמרוץ הזה בלי להעמיד פנים שהכול מושלם.</p>
+            <p class="slide__note">מצגת התפתחות אישית • העוצמה שבך</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">הגדרה</span>
+            <h2>תודעת חוסר היא לא בעיה של כסף</h2>
+            <p class="slide__lead">זו דרך להסתכל על מה שיש, שמרגישה כמו עובדה מוגמרת.</p>
+            <ul class="slide__list">
+              <li>התפיסה שהמשאבים מוגבלים: כסף, זמן, אהבה, הזדמנויות.</li>
+              <li>ואם מישהי אחרת קיבלה, סימן שנשארתי בלי.</li>
+              <li>המחשבה נעה בין “אין לי מספיק” ל“עוד קצת ואז ארגיש בטוחה”.</li>
+            </ul>
+            <p class="slide__note">זו לא תכונת אופי, אלא הרגל מחשבתי שאפשר להחליף.</p>
+          </article>
+
+          <article class="slide slide--quote" data-slide>
+            <span class="slide__kicker">סימנים</span>
+            <h2>איך זה נשמע בפנים</h2>
+            <ul class="slide__quotes">
+              <li>“אם אני לא אקח את זה עכשיו, לא תהיה הזדמנות שנייה.”</li>
+              <li>“למה לה זה קל ולי כל כך קשה?”</li>
+              <li>“אין לי זמן, אני מאחרת, תמיד מאוחר מדי.”</li>
+              <li>“אני לא יכולה להרשות לעצמי לנוח.”</li>
+            </ul>
+            <p class="slide__note">המשפטים האלה לא מתארים את המציאות. הם מתארים את הפחד.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">מאיפה זה מגיע</span>
+            <h2>שלושה מקורות עיקריים</h2>
+            <ul class="slide__list">
+              <li><strong>מסרים מהבית:</strong> “אין כסף לזה”, “תסתפקי במה שיש”.</li>
+              <li><strong>השוואה חברתית:</strong> אנחנו רואות אצל אחרות רק את הרגעים היפים.</li>
+              <li><strong>פחד לאבד:</strong> המוח נותן למה שאפשר לאבד משקל כפול ממה שאפשר להרוויח.</li>
+            </ul>
+            <p class="slide__note">המסרים האלה נאמרו מאהבה, וחלקם נשארו איתנו הרבה אחרי שהם פסקו להיות נכונים.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">המחיר</span>
+            <h2>מה זה עולה לנו</h2>
+            <ul class="slide__list">
+              <li>החלטות מתוך לחץ: “שיהיה כבר”, “אם לא עכשיו אז אף פעם”.</li>
+              <li>דחיינות והקפאה: כשאין מספיק, לפעמים נוח יותר לא לנסות בכלל.</li>
+              <li>עייפות מתמדת: הגוף נשאר במרוץ גם כשמשהו טוב קורה.</li>
+              <li>קושי לשמוח בהצלחה של אחרת, ואחר כך רגשי אשמה.</li>
+            </ul>
+            <p class="slide__note">המחיר האמיתי הוא לא רק מה שלא השגנו, אלא איך שהרגשנו בדרך.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">חשוב להבהיר</span>
+            <h2>תודעת שפע היא לא</h2>
+            <ul class="slide__list">
+              <li>לא להעמיד פנים ש“הכול מושלם” כשקשה.</li>
+              <li>לא להאשים את עצמך שאת “לא מספיק חיובית”.</li>
+              <li>לא להתעלם מכסף, ממספרים ומגבולות.</li>
+              <li>ולא להבטיח לעצמך שכל חלום יתגשם בדיוק כמו שדמיינת.</li>
+            </ul>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">ההגדרה שלי</span>
+            <h2>תודעת שפע היא כן</h2>
+            <ul class="slide__list">
+              <li>“יש מספיק בשבילי ובשביל אחרות” — כמנהג שמוכיחים לעצמי, לא כסיסמה.</li>
+              <li>לבחור מתוך רצון, לא מתוך פחד לפספס.</li>
+              <li>להחזיק יחד את המצב הנוכחי ואת מה שאפשרי.</li>
+              <li>לתת מקום לכסף, לזמן ולאהבה בלי תחושת מחסור קבועה.</li>
+            </ul>
+            <p class="slide__note">שפע נמדד בגמישות של הבחירות שלנו, לא בכמות הדברים בבית.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">צעד 1 מתוך 3</span>
+            <h2>לתפוס את המשפט</h2>
+            <ol class="slide__steps">
+              <li><strong>לזהות:</strong> איזה משפט חוזר אצלך שוב ושוב?</li>
+              <li><strong>לכתוב אותו במדויק:</strong> כמו שהוא נשמע, בלי לייפות.</li>
+              <li><strong>לשאול:</strong> ממה הוא מגן עליי? למשל, מפני אכזבה.</li>
+            </ol>
+            <p class="slide__note">מה שאנחנו לא שמות לב אליו, ממשיך להחליט בשבילנו.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">צעד 2 מתוך 3</span>
+            <h2>לעשות את הצעד הקטן</h2>
+            <ol class="slide__steps">
+              <li><strong>במקום “אין לי זמן”:</strong> לקחת עשר דקות בפועל ולסמן שהן היו.</li>
+              <li><strong>במקום “אין לי כסף לזה”:</strong> לבחור משהו קטן שאפשר להרשות לעצמי.</li>
+              <li><strong>לבנות ראיה:</strong> כל פעולה קטנה מוכיחה שהמשאב קיים.</li>
+            </ol>
+            <p class="slide__note">לא ביום אחד של פזרנות, אלא בקצב שאפשר להחזיק לאורך זמן.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">צעד 3 מתוך 3</span>
+            <h2>יומן ראיות לשפע</h2>
+            <p class="slide__lead">פעם ביום, שלוש שורות. לא תודה כללית, ראיות קונקרטיות.</p>
+            <ol class="slide__steps">
+              <li><strong>מה היה לי:</strong> משהו קטן שהשתמשתי בו היום.</li>
+              <li><strong>מה הגיע אליי:</strong> עזרה, מחמאה, הזדמנות.</li>
+              <li><strong>מה בחרתי:</strong> החלטה אחת שהייתה שלי.</li>
+            </ol>
+            <p class="slide__note">פעם בשבוע, לקרוא את מה שכתבת ולסמן את מה שחזר.</p>
+          </article>
+
+          <article class="slide" data-slide>
+            <span class="slide__kicker">לכתיבה</span>
+            <h2>שאלות לקחת איתך</h2>
+            <ul class="slide__list">
+              <li>איפה אני מרגישה “אין מספיק” בעיקר: זמן, כסף, תשומת לב או אהבה?</li>
+              <li>איזה משפט למדתי בבית ואני עדיין משלמת עליו?</li>
+              <li>מה הייתי בוחרת אילו הייתי יודעת שיש מספיק?</li>
+              <li>מה הצעד הקטן שלי השבוע?</li>
+            </ul>
+          </article>
+
+          <article class="slide slide--cta" data-slide>
+            <span class="slide__kicker">לסיום</span>
+            <p class="slide__bigquote">“שפע הוא לא מה שיש לך בחשבון. הוא כמה מקום נשאר לך לבחור.”</p>
+            <p>הצעד הבא שלך נמצא כאן, בדיוק בגודל שאת יכולה להחזיק היום.</p>
+            <a class="btn btn--primary" href="index.html#daily">לתרגול של היום</a>
+            <a class="btn btn--secondary" href="index.html#courses">לעוד קורסים</a>
+            <p class="slide__note">התוכן הוא כלי להתפתחות אישית, ולא תחליף לטיפול או לייעוץ מקצועי.</p>
+          </article>
+        </div>
+
+        <div class="deck__bar">
+          <button class="btn btn--secondary deck__btn" type="button" data-deck-prev>הקודם</button>
+          <div class="deck__dots" data-deck-dots></div>
+          <button class="btn btn--primary deck__btn" type="button" data-deck-next>הבא</button>
+        </div>
+
+        <p class="deck__hint">טיפ: אפשר להדפיס את המצגת (Ctrl+P) ולשמור אותה כ־PDF.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span data-current-year>2026</span> העוצמה שבך • אתר לדוגמה להתפתחות אישית</footer>
+</body>
+</html>
